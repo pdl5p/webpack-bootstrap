@@ -3,38 +3,61 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Webpack and Bootstrap</title>
+
+
 	<base href="/">
 </head>
 <body>
-	<div class="container">
-		<h1 class="text-center">Bootstrap loaded with webpack!</h1>
-		
-		<br />
-		
-		<div class="text-center">
-			<!-- Standard button -->
-			<button type="button" class="btn btn-default">Default</button>
 
-			<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-			<button type="button" class="btn btn-primary">Primary</button>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
-			<!-- Indicates a successful or positive action -->
-			<button type="button" class="btn btn-success">Success</button>
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>Sticky footer with fixed navbar</h1>
+      </div>
+      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
+      <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+    </div>
 
-			<!-- Contextual button for informational alert messages -->
-			<button type="button" class="btn btn-info">Info</button>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
 
-			<!-- Indicates caution should be taken with this action -->
-			<button type="button" class="btn btn-warning">Warning</button>
-
-			<!-- Indicates a dangerous or potentially negative action -->
-			<button type="button" class="btn btn-danger">Danger</button>
-
-			<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-			<button type="button" class="btn btn-link">Link</button>
-		</div>
-	</div>
-	
 	<script src="bundle.js"></script>
 </body>
 </html>
